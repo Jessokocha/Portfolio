@@ -1,10 +1,41 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+/* Navigation CSS*/
+#navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 5%;
+  background-color: rgb(0, 123, 255);
+}
 
-/* Grid CSS */
+#navigation {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#navigation p {
+  cursor: pointer;
+  text-decoration: none;
+}
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+.menu a {
+  margin: 15px;
+  cursor: pointer;
+  color: lightblue;
+}
 
-#heroGrid {
+/* intro Grid CSS */
+
+#introGrid {
   margin: 0px 5%;
   display: grid;
   min-height: 500px;
@@ -12,8 +43,8 @@ body {
   grid-template-rows: 45% 55%;
   grid-template-columns: 45% 55%;
   grid-template-areas:
-    "avatar secondaryProduct"
-    "avatar CTA";
+    "avatar presentation"
+    "avatar more";
 }
 
 #avatar {
@@ -21,33 +52,21 @@ body {
   background-image: url("../images/Me.png");
 }
 
-#secondaryProduct {
-  grid-area: secondaryProduct;
+#presentation {
+  grid-area: presentation;
   background-color: white;
   flex-direction: column;
   justify-content: space-around;
 }
 
-#CTA {
-  grid-area: CTA;
+#more {
+  grid-area: more;
   background-color: white;
   justify-content: space-around;
-  cursor: pointer;
   flex-direction: column;
 }
 
-#headline {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-bottom: 5px solid #ff6200;
-  position: absolute;
-  right: -50px;
-  top: 100px;
-  padding: 25px;
-  max-width: 550px;
-  z-index: 100;
-}
-
-.heroGridArea {
+.introGridArea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,34 +75,52 @@ body {
   position: relative;
 }
 
-.heroGridArea img {
+.introGridArea img {
   height: 120px;
   width: fit-content;
 }
 
-/* Category Grid CSS */
+.introGridArea h2 {
+  font-size: 30px;
+  margin: 0px 0px;
+  color: #ff6200;
+  align-items: flex-end;
+}
 
-.subHeading {
+.introGridArea p {
+  text-align: center;
+}
+
+/* main Grid CSS */
+
+/* .subHeading {
   text-align: center;
   border-bottom: 2px solid black;
   width: 300px;
   margin: 50px auto;
-}
+} */
 
-#categoryGrid {
+#mainGrid {
   margin: 0px 5%;
   display: grid;
-  grid-template-rows: 300px 300px 300px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas:
-    "bookcases bedroom patio"
-    "couches couches patio"
-    "desks desks desks";
+    "about text text text"
+    "work project1 project1 project1"
+    "work project2 project3 project4";
 }
 
-#bookcases {
-  grid-area: bookcases;
+#about {
+  grid-area: about;
   background-image: url("../images/bookcases@2x.png");
+}
+
+#text {
+  grid-area: text;
+}
+
+#work {
 }
 #bedroom {
   grid-area: bedroom;
@@ -127,35 +164,6 @@ body {
 /* Navigation CSS */
 /* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
 
-#navBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0px 5%;
-}
-
-#navigation {
-  display: flex;
-  width: 50%;
-  align-items: center;
-  justify-content: space-evenly;
-}
-#navigation p {
-  cursor: pointer;
-  text-decoration: none;
-}
-.menu {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 40%;
-}
-.menu a {
-  margin: 15px;
-  cursor: pointer;
-  color: lightblue;
-}
 .highlight {
   color: #ff6200;
   font-weight: 700;
@@ -173,6 +181,7 @@ h3 {
   font-size: 32px;
   font-weight: 300;
   margin: 0px 0px;
+  text-align: center;
 }
 
 h4 {
