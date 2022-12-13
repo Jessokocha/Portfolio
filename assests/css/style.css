@@ -101,19 +101,20 @@ body {
 } */
 
 #mainGrid {
-  margin: 0px 5%;
+  margin: 100px 5%;
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas:
     "about text text text"
     "work project1 project1 project1"
-    "work project2 project3 project4";
+    "work project2 project3 project4"
+    "contact ct1 ct2 ct3";
 }
 
 #about {
   grid-area: about;
-  background-image: url("../images/bookcases@2x.png");
+  background-color: white;
 }
 
 #text {
@@ -121,8 +122,64 @@ body {
 }
 
 #work {
+  grid-area: work;
+  background-color: white;
 }
-#bedroom {
+
+#project1 {
+  grid-area: project1;
+}
+
+#project2 {
+  grid-area: project2;
+}
+
+#project3 {
+  grid-area: project3;
+}
+
+#project4 {
+  grid-area: project4;
+}
+
+#contact {
+  grid-area: contact;
+  background-color: white;
+}
+
+#ct1 {
+  grid-area: ct1;
+}
+#ct2 {
+  grid-area: ct2;
+}
+
+#ct3 {
+  grid-area: ct3;
+}
+
+.mainGridArea {
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+}
+
+.mainGridArea h2 {
+  font-size: 80x;
+  margin: 0px 0px;
+  color: #ff6200;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainGridArea .heading {
+  grid-row: 1/2;
+}
+.sidetitle {
+  background-color: rgba(51, 111, 240, 0.7);
+}
+/* #bedroom {
   grid-area: bedroom;
   background-image: url("../images/beds@2x.png");
 }
@@ -150,7 +207,7 @@ body {
   cursor: pointer;
   display: grid;
   align-content: end;
-}
+} */
 
 .heading {
   background-color: rgba(0, 0, 0, 0.7);
