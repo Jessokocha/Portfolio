@@ -86,38 +86,36 @@ body {
 .introGridArea h2 {
   font-size: 30px;
   margin: 0px 0px;
-  color: #ff6200;
+  color: rgb(41, 102, 183);
   align-items: flex-end;
 }
 
 .introGridArea p {
   text-align: center;
+  font-family: fantasy;
+  font-style: italic;
+  font-size: 16pt;
 }
 
 /* main Grid CSS */
 
-/* .subHeading {
-  text-align: center;
-  border-bottom: 2px solid black;
-  width: 300px;
-  margin: 50px auto;
-} */
-
 #mainGrid {
+  height: 550px;
   margin: 100px 5%;
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas:
-    "about txt txt txt"
+    "aboutme txt txt txt"
     "work project1 project1 project2"
     "work project1 project1 project3"
     "contact ct1 ct2 ct3";
 }
 
-#about {
-  grid-area: about;
+#aboutme {
+  grid-area: aboutme;
   background-color: white;
+  display: flex;
 }
 
 #txt {
@@ -127,6 +125,7 @@ body {
 #work {
   grid-area: work;
   background-color: white;
+  display: flex;
 }
 
 #project1 {
@@ -153,19 +152,15 @@ body {
   background-size: cover;
 }
 
-/* #project4 {
-  grid-area: project4;
-} */
-
 #contact {
   grid-area: contact;
   background-color: white;
+  display: flex;
 }
 
 #ct1 {
   grid-area: ct1;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 #ct2 {
@@ -203,12 +198,20 @@ body {
   width: 200px;
 }
 
+.github {
+  width: 150px;
+}
+
+.mainGridArea p {
+  font-size: 14pt;
+  font-family: "Poppins", sans-serif;
+}
 /* .mainGridArea .heading {
   grid-row: 1/2;
 } */
-.sidetitle {
-  background-color: rgba(51, 111, 240, 0.7);
-}
+/* .sidetitle {
+  background-color: rgba(51, 111, 240, 0.7); */
+/* } */
 /* #bedroom {
   grid-area: bedroom;
   background-image: url("../images/beds@2x.png");
@@ -245,7 +248,9 @@ body {
   height: 25px;
   color: white;
   font-size: 18px;
-  border-bottom: 5px solid #ff6200;
+  border-bottom: 5px solid rgb(41, 102, 183);
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }
 
 .heading a {
@@ -257,7 +262,7 @@ body {
 /* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
 
 .highlight {
-  color: #ff6200;
+  color: rgb(41, 102, 183);
   font-weight: 700;
 }
 
@@ -266,12 +271,13 @@ body {
 h2 {
   font-size: 30px;
   margin: 0px 0px;
-  color: #ff6200;
+  color: rgb(41, 102, 183);
   display: flex;
+  font-family: "Courier New", Courier, monospace;
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 300;
   margin: 0px 0px;
   text-align: center;
@@ -289,6 +295,14 @@ h4 {
   font-weight: 300;
   margin: 0px 0px;
   color: #636364;
+}
+
+.text2 {
+  color: rgb(41, 102, 183);
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
 }
 
 @media only screen and (max-width: 1000px) {
